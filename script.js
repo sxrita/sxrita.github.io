@@ -61,8 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function typeMessage(text, element, callback, index = 0) {
         if (index < text.length) {
             element.textContent += text.charAt(index);
-            // Desplazar el contenedor del mensaje hacia abajo
-            element.scrollTop = element.scrollHeight;
             setTimeout(() => typeMessage(text, element, callback, index + 1), 100);
         } else {
             callback();
