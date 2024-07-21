@@ -23,3 +23,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('login-form');
+    const errorMessage = document.getElementById('error-message');
+    const messageContainer = document.getElementById('message-container');
+    const progressiveMessage = document.getElementById('progressive-message');
+
+    const message = "Hola Sara, ¿Cómo estás? Espero que estés muy bien. Me he tomado el tiempo de diseñar esto para ti porque sinceramente eres una persona muy especial para mí que merece mucho de mi tiempo incluso cuando no estoy contigo.";
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === 'Sara' && password === 'Saraymilo') {
+            // Ocultar el formulario y mostrar el mensaje progresivo
+            form.classList.add('hidden');
+            errorMessage.textContent = '';
+            messageContainer.style.display = 'block';
+            typeMessage(message, progressiveMessage);
+        } else {
+            // Mostrar mensaje de error
+            errorMessage.textContent = 'Usuario o contraseña incorrectos. Inténtalo de nuevo.';
+        }
+    });
+
+    function typeMessage(text, element, index = 0) {
+        if (index < text.length) {
+            element.textContent += text.charAt(index);
+            setTimeout(() => typeMessage(text, element, index + 1), 100); // Ajusta la velocidad aquí
+        }
+    }
+});
