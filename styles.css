@@ -1,3 +1,4 @@
+/* Estilos generales */
 body {
     margin: 0;
     padding: 0;
@@ -73,15 +74,44 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    background-color: #ff80d8; /* Fondo rosa oscuro */
-    color: white; /* Texto blanco */
+    background-color: #ff80d8;
+    color: white;
     border-radius: 10px;
-    font-family: 'Courier New', Courier, monospace; /* Fuente de aspecto de escritura */
+    font-family: 'Courier New', Courier, monospace;
     font-size: 18px;
-    white-space: pre-wrap; /* Para mantener los saltos de línea */
+    white-space: pre-wrap;
     max-width: 90%;
     box-sizing: border-box;
-    overflow-wrap: break-word; /* Ajustar el texto para que no se desborde */
+    overflow-wrap: break-word;
+}
+
+/* Estilo para los fuegos artificiales */
+#fireworks-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Estilo para el mensaje grande */
+#love-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: #ea4c89;
+    font-family: 'Arial', sans-serif;
+    display: none;
+}
+
+/* Animaciones */
+@keyframes explode {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
 }
 
 /* Ajustes para dispositivos móviles */
@@ -103,5 +133,9 @@ body {
     #message-container {
         font-size: 16px;
         padding: 15px;
+    }
+
+    #love-message {
+        font-size: 3em;
     }
 }
