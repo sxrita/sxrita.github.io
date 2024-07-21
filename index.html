@@ -1,1 +1,32 @@
-te amo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Amoroso</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form id="login-form">
+                <div class="textbox">
+                    <input type="text" placeholder="Usuario" id="username" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Contraseña" id="password" required>
+                </div>
+                <button type="submit" class="btn">Iniciar Sesión</button>
+                <p id="error-message" class="error-message"></p>
+            </form>
+            <div id="message-container">
+                <p id="progressive-message"></p>
+            </div>
+        </div>
+    </div>
+    <div id="fireworks-container"></div>
+    <div id="love-message" class="hidden">Te amo</div>
+    <script src="script.js"></script>
+</body>
+</html>
