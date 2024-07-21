@@ -50,7 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function explodeBox() {
-        const loginBox = document.querySelector('.login-box');
-        loginBox.style.animation = 'explode 1s forwards';
+        messageContainer.style.animation = 'explode 1s forwards';
+        setTimeout(() => {
+            messageContainer.style.display = 'none';
+        }, 1000);
     }
 });

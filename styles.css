@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .container {
@@ -81,8 +82,9 @@ body {
     font-size: 18px;
     white-space: pre-wrap;
     max-width: 90%;
+    max-height: 70vh; /* Ajuste para limitar la altura */
     box-sizing: border-box;
-    overflow-wrap: break-word;
+    overflow-y: auto; /* Habilita el scroll vertical si el contenido es demasiado largo */
 }
 
 /* Estilo para los fuegos artificiales */
@@ -133,6 +135,7 @@ body {
     #message-container {
         font-size: 16px;
         padding: 15px;
+        max-height: 60vh; /* Ajusta la altura máxima para pantallas pequeñas */
     }
 
     #love-message {
