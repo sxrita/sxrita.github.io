@@ -74,11 +74,4 @@ document.addEventListener('DOMContentLoaded', function() {
         fireworksContainer.appendChild(fireworks);
         // Aquí podrías inicializar la biblioteca o añadir un efecto de fuegos artificiales manualmente
     }
-
-    function explodeBox() {
-        messageContainer.style.animation = 'explode 1s forwards';
-        setTimeout(() => {
-            messageContainer.style.display = 'none';
-        }, 1000);
-    }
 });
